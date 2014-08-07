@@ -59,65 +59,40 @@ int main() {
 			fwd = 0;
 			bck = limit - 1;
 			
-			if (digit[j] > digit[k]) {
-				digit[k] = digit[j];
-				while (fwd != j) {
-					digit[bck] = digit[fwd];
-					bck--;
-					fwd++;
+			index = -3;
+			while (fwd <= j) {
+				if (digit[fwd] < digit[bck]) {
+					index = -1;
 				}
-			} else {
-				index = -1;
-				while (fwd <= j) {
-					if (digit[fwd] < digit[bck]) {
-						fwd = -1;
-						break;
-					}
-					if ((digit[fwd] == 9) && (digit[fwd] > digit[bck])) {
-						index = fwd;
-					}
-					bck--;		fwd++;
+				if (digit[fwd] > digit[bck]) {
+					index = -2;
 				}
-				
-				if (fwd == -1) {	// break from 70.
-					while (digit[j] == 9) {
-						digit[j] = digit[k] = 0;
-						k++;	j--;
-					}
-					digit[j] += 1;
-					digit[k] = digit[j];
+				bck--;		fwd++;
+			}
+			// If fwd is -1 iska matlab ye ki middle ke paas waala koi left position aisa h jiski value less than that of its
+			// right hand value
+			if (index == -1 || index == -3) {	// break from 70.
+				while (digit[j] == 9) {
+					digit[j] = digit[k] = 0;
 					k++;	j--;
-				} else {
-					fwd = fwd - 1;
-					bck = bck + 1;					
-					if (index == -1) {
-						while ((digit[fwd] == digit[bck]) && (digit[fwd] == 9)) {
-							digit[fwd] = digit[bck] = 0;
-							bck++;	fwd--;
-						}
-						digit[fwd] += 1;
-						digit[bck] = digit[fwd];
-						bck++;	fwd--;
-						j = fwd;
-						k = bck;
-					} else {
-						digit[limit - index - 1] = digit[index];
-					}
 				}
+				digit[j] += 1;
+				digit[k] = digit[j];
+				k++;	j--;
+			}
 
-				fwd = 0;
-				bck = limit - 1;
-				while (fwd <= j) {
-					digit[bck] = digit[fwd];
-					fwd++;		bck--;
-				}
+			fwd = 0;
+			bck = limit - 1;
+			while (fwd <= j) {
+				digit[bck] = digit[fwd];
+				fwd++;		bck--;
 			}
 
 			for (fwd = 0; fwd < limit; fwd++) {
 				printf("%d", digit[fwd]);
 			}
 			printf("\n");
-			
+
 		} else {
 			if (limit == 1) {
 				printf("11\n");
