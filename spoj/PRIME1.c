@@ -1,6 +1,10 @@
 /**
+ * Created by Ankit Tripathi.
+ * For further queries/suggestions please mail at ankittripathi0000@gmail.com.
+ *
+ * SPOJ ID: aka_lone_wolf
  * http://www.spoj.com/problems/PRIME1/
- * @author aka_lone_wolf <ankittripathi0000@gmail.com>
+ *
  */
 #include<stdio.h>
 #include<string.h>

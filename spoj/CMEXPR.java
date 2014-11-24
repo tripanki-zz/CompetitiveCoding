@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 /**
  * Created by Ankit Tripathi on 11-08-2014.
  * For further queries/suggestions please mail at ankittripathi0000@gmail.com.
+ *
+ * SPOJ ID: aka_lone_wolf
  *	http://www.spoj.com/problems/CMEXPR/
  */
 public class CMEXPR {

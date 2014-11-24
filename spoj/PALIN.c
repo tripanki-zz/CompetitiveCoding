@@ -2,9 +2,13 @@
 
 #define LIM 1000001
 
-/*
-	http://www.spoj.com/problems/PALIN/
-	Ankit Tripathi (ankittripathi0000@gmail.com)
+/**
+ * Created by Ankit Tripathi.
+ * For further queries/suggestions please mail at ankittripathi0000@gmail.com.
+ *
+ * SPOJ ID: aka_lone_wolf
+ * http://www.spoj.com/problems/PALIN/
+ *
 */
 
 char digit[LIM] = {0};

@@ -1,7 +1,7 @@
-package oj.leetcode;
-
 /**
- * @author ankit2478
+ * Created by Ankit Tripathi.
+ * For further queries/suggestions please mail at ankittripathi0000@gmail.com.
+ *
  * @see https://oj.leetcode.com/problems/edit-distance/
  */
 public class EditDistance {

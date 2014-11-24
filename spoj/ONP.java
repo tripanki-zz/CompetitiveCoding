@@ -5,8 +5,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 /**
+ * Created by Ankit Tripathi.
+ * For further queries/suggestions please mail at ankittripathi0000@gmail.com.
+ *
+ * SPOJ ID: aka_lone_wolf
  * http://www.spoj.com/problems/ONP/
- * @author aka_lone_wolf <ankittripathi0000@gmail.com>
+ *
  */
 public class ONP {
 
